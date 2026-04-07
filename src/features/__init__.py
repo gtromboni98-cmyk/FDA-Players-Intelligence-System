@@ -1,10 +1,22 @@
 """
 Features module for data processing and feature engineering.
-Includes data processing, position mapping, match stats expansion, and PCA scoring.
+Organized as logical submodules: core, positions, stats, scoring.
+
+BACKWARD COMPATIBILITY:
+All features are re-exported here, so existing code like:
+    from src.features import DataProcessor, apply_position_mapping, etc.
+will continue to work without modification.
 """
 
-from .data_processor import DataProcessor, CareerAnalyzer
-from .position_mapping import (
+# ============================================================================
+# Core data processing
+# ============================================================================
+from .core import DataProcessor, CareerAnalyzer
+
+# ============================================================================
+# Position mapping
+# ============================================================================
+from .positions import (
     generalize_position,
     generalize_position_from_list,
     apply_position_mapping,
@@ -12,14 +24,22 @@ from .position_mapping import (
     filter_by_position,
     get_position_distribution
 )
-from .match_stats_expansion import (
+
+# ============================================================================
+# Match statistics expansion
+# ============================================================================
+from .stats import (
     extract_total_stats,
     extract_average_stats,
     expand_match_stats,
     extract_positions_from_nested,
     clean_match_stats_df
 )
-from .pca_scoring import (
+
+# ============================================================================
+# PCA scoring
+# ============================================================================
+from .scoring import (
     get_pca_score_names,
     get_score_features,
     calculate_single_pca_score,

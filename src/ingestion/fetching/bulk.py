@@ -3,7 +3,7 @@ Data fetching and collection module for player information.
 """
 
 from typing import Dict, List, Set, Optional
-from src.ingestion.api_client import WyscoutAPIClient
+from src.ingestion.api import WyscoutAPIClient
 from src.config import KNOWN_COMPETITIONS, ACTIVE_COMPETITIONS
 
 
