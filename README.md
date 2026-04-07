@@ -176,6 +176,7 @@ See [ENV_SETUP.md](ENV_SETUP.md) for complete configuration guide.
 |----------|---------|
 | [QUICKSTART.md](QUICKSTART.md) | Get started with examples |
 | [ENV_SETUP.md](ENV_SETUP.md) | Configure credentials & settings |
+| [INTEGRATION.md](INTEGRATION.md) | System architecture & how to extend |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Detailed module documentation |
 
 ## Output
