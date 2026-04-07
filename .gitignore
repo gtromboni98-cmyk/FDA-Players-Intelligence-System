@@ -1,26 +1,12 @@
-# Pickle files
-*.pkl
-*.pickle
-*.dill
-
-# Excel files
-*.xls
-*.xlsx
-*.xlsm
-*.csv
-
-# Python cache and environment
-__pycache__/
-*.py[cod]
-*$py.class
-.venv/
-venv/
-
-# IDE
+# .gitignore
+.env
+data/raw/
+data/processed/
+data/api/
+data/cache/
+outputs/models/
 .vscode/
-.idea/
-*.swp
-
-# OS
-.DS_Store
-Thumbs.db
+__pycache__/
+*.pyc
+env_fis/
+PlayerIntelligenceSystem.ipynb
