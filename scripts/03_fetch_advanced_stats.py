@@ -13,7 +13,7 @@ manager = DataManager()
 fetcher = DataFetcher()
 
 # Load player profiles
-df_players = manager.load_pickle('data/processed/player_profiles.pkl')
+df_players = manager.load_pickle('data/processed/players_profiles.pkl')
 
 Logger.print_info(f"Fetching stats for {len(df_players)} players...")
 
@@ -36,8 +36,8 @@ for idx, player in df_players.iterrows():
 df_stats = pd.DataFrame(all_match_stats)
 Logger.print_success(f"Collected {len(df_stats)} match records")
 
-# Save stats
-manager.save_pickle(df_stats, 'data/processed/match_stats.pkl')
-manager.save_dataframe(df_stats, 'data/processed/match_stats.csv')
+# Save stats to raw data directory (for use in scripts and notebooks)
+manager.save_pickle(df_stats, 'data/raw/match_stats.pkl')
+manager.save_dataframe(df_stats, 'data/raw/match_stats.csv')
 
-Logger.print_success("Advanced stats saved to data/processed/")
+Logger.print_success("Advanced stats saved to data/raw/")

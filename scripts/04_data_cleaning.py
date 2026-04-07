@@ -13,8 +13,8 @@ Logger.print_section("FASE 4: Data Cleaning & Feature Engineering")
 manager = DataManager()
 processor = DataProcessor()
 
-# Load raw match stats
-df_stats = manager.load_pickle('data/processed/match_stats.pkl')
+# Load raw match stats from raw data directory
+df_stats = manager.load_pickle('data/raw/match_stats.pkl')
 
 Logger.print_info(f"Starting shape: {df_stats.shape}")
 
